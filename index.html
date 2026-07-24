@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy First Month 🤍</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:
+    linear-gradient(135deg,#ffe6ee,#fff);
+    font-family:Poppins,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#444;
+}
+
+
+.container{
+    text-align:center;
+}
+
+
+h1{
+    font-family:"Playfair Display";
+    font-size:40px;
+    color:#d94f7d;
+}
+
+
+.subtitle{
+    margin-top:10px;
+}
+
+
+.basket{
+    margin:25px auto;
+    font-size:70px;
+}
+
+
+.count{
+    font-size:22px;
+    color:#d94f7d;
+}
+
+
+.heart{
+    position:absolute;
+    font-size:35px;
+    cursor:pointer;
+    animation:fall linear forwards;
+}
+
+
+@keyframes fall{
+
+0%{
+    transform:translateY(-10vh) rotate(0deg);
+}
+
+100%{
+    transform:translateY(110vh) rotate(360deg);
+}
+
+}
+
+
+
+#openLetter{
+    display:none;
+    margin-top:20px;
+    padding:12px 25px;
+    border:0;
+    border-radius:30px;
+    background:#d94f7d;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+
+
+.letter{
+
+display:none;
+position:absolute;
+width:90%;
+max-width:600px;
+height:80vh;
+overflow:auto;
+
+background:#fff;
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:0 15px 40px #0003;
+
+animation:pop .8s;
+
+}
+
+
+
+@keyframes pop{
+
+from{
+transform:scale(.5);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+
+
+.letter h2{
+
+font-family:"Playfair Display";
+color:#d94f7d;
+text-align:center;
+margin-bottom:20px;
+
+}
+
+
+
+.letter p{
+
+line-height:1.8;
+font-size:15px;
+white-space:pre-line;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container" id="game">
+
+
+<h1>
+Happy First Month 🤍
+</h1>
+
+
+<p class="subtitle">
+collect my love first to unlock your surprise ✨
+</p>
+
+
+<div class="basket">
+🧺
+</div>
+
+
+<div class="count">
+Love collected :
+<span id="score">0</span>/10 ❤️
+</div>
+
+
+<button id="openLetter">
+💌 Open Letter
+</button>
+
+
+</div>
+
+
+
+<div class="letter" id="letter">
+
+
+<h2>
+For You, Sayang 🤍
+</h2>
+
+
+<p>
+
+happy first month, sayang. 🤍
+
+selamat buat tanggal 21 kita yang pertama. honestly, aku masih ngerasa semuanya cepet banget. rasanya baru kemarin kita mulai kenal lebih deket, eh sekarang udah ada di titik ini.
+
+makasih ya udah hadir di hidup aku. makasih juga udah selalu nyempetin waktu, dengerin cerita-cerita random aku, dan bikin hari-hari biasa jadi lebih seru. you probably don't realize it, but those little things really mean a lot to me.
+
+aku tau ini baru satu bulan. we're still learning about each other, masih banyak hal yang harus kita pelajarin bareng. mungkin nanti bakal ada hari yang capek, beda pendapat, atau hal-hal yang nggak sesuai sama ekspektasi. but that's okay. i just hope kita nggak pernah capek buat komunikasi dan saling ngerti.
+
+aku nggak minta hubungan yang sempurna, because i know that's impossible. yang aku mau sesimpel kita tetap ada buat satu sama lain, tetap bisa ngobrol baik-baik kalau ada apa-apa, dan tetap milih buat stay.
+
+once again, thank you ya, sayang. i'm really happy i get to celebrate this first 21st with you. semoga ini bukan cuma yang pertama, tapi jadi awal buat banyak tanggal 21 lainnya yang masih bisa kita rayain bareng.
+
+happy first month. i'm really glad it's you. 🤍
+
+</p>
+
+
+</div>
+
+
+
+<script>
+
+
+let score=0;
+
+
+function spawnLove(){
+
+
+let love=document.createElement("div");
+
+
+love.className="heart";
+
+love.innerHTML="❤️";
+
+
+love.style.left=Math.random()*95+"vw";
+
+love.style.animationDuration=
+(Math.random()*3+3)+"s";
+
+
+
+love.onclick=function(){
+
+
+score++;
+
+document.getElementById("score").innerHTML=score;
+
+
+love.remove();
+
+
+
+if(score>=10){
+
+document.getElementById("openLetter").style.display="inline-block";
+
+}
+
+
+}
+
+
+
+document.body.appendChild(love);
+
+
+
+setTimeout(()=>{
+
+love.remove();
+
+},6000);
+
+
+
+}
+
+
+
+setInterval(spawnLove,700);
+
+
+
+
+
+document.getElementById("openLetter").onclick=function(){
+
+
+document.getElementById("game").style.display="none";
+
+document.getElementById("letter").style.display="block";
+
+
+}
+
+
+
+</script>
+
+
+</body>
+  </html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy First Month 🤍</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:
+    linear-gradient(135deg,#ffe6ee,#fff);
+    font-family:Poppins,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#444;
+}
+
+
+.container{
+    text-align:center;
+}
+
+
+h1{
+    font-family:"Playfair Display";
+    font-size:40px;
+    color:#d94f7d;
+}
+
+
+.subtitle{
+    margin-top:10px;
+}
+
+
+.basket{
+    margin:25px auto;
+    font-size:70px;
+}
+
+
+.count{
+    font-size:22px;
+    color:#d94f7d;
+}
+
+
+.heart{
+    position:absolute;
+    font-size:35px;
+    cursor:pointer;
+    animation:fall linear forwards;
+}
+
+
+@keyframes fall{
+
+0%{
+    transform:translateY(-10vh) rotate(0deg);
+}
+
+100%{
+    transform:translateY(110vh) rotate(360deg);
+}
+
+}
+
+
+
+#openLetter{
+    display:none;
+    margin-top:20px;
+    padding:12px 25px;
+    border:0;
+    border-radius:30px;
+    background:#d94f7d;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+
+
+.letter{
+
+display:none;
+position:absolute;
+width:90%;
+max-width:600px;
+height:80vh;
+overflow:auto;
+
+background:#fff;
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:0 15px 40px #0003;
+
+animation:pop .8s;
+
+}
+
+
+
+@keyframes pop{
+
+from{
+transform:scale(.5);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+
+
+.letter h2{
+
+font-family:"Playfair Display";
+color:#d94f7d;
+text-align:center;
+margin-bottom:20px;
+
+}
+
+
+
+.letter p{
+
+line-height:1.8;
+font-size:15px;
+white-space:pre-line;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container" id="game">
+
+
+<h1>
+Happy First Month 🤍
+</h1>
+
+
+<p class="subtitle">
+collect my love first to unlock your surprise ✨
+</p>
+
+
+<div class="basket">
+🧺
+</div>
+
+
+<div class="count">
+Love collected :
+<span id="score">0</span>/10 ❤️
+</div>
+
+
+<button id="openLetter">
+💌 Open Letter
+</button>
+
+
+</div>
+
+
+
+<div class="letter" id="letter">
+
+
+<h2>
+For You, Sayang 🤍
+</h2>
+
+
+<p>
+
+happy first month, sayang. 🤍
+
+selamat buat tanggal 21 kita yang pertama. honestly, aku masih ngerasa semuanya cepet banget. rasanya baru kemarin kita mulai kenal lebih deket, eh sekarang udah ada di titik ini.
+
+makasih ya udah hadir di hidup aku. makasih juga udah selalu nyempetin waktu, dengerin cerita-cerita random aku, dan bikin hari-hari biasa jadi lebih seru. you probably don't realize it, but those little things really mean a lot to me.
+
+aku tau ini baru satu bulan. we're still learning about each other, masih banyak hal yang harus kita pelajarin bareng. mungkin nanti bakal ada hari yang capek, beda pendapat, atau hal-hal yang nggak sesuai sama ekspektasi. but that's okay. i just hope kita nggak pernah capek buat komunikasi dan saling ngerti.
+
+aku nggak minta hubungan yang sempurna, because i know that's impossible. yang aku mau sesimpel kita tetap ada buat satu sama lain, tetap bisa ngobrol baik-baik kalau ada apa-apa, dan tetap milih buat stay.
+
+once again, thank you ya, sayang. i'm really happy i get to celebrate this first 21st with you. semoga ini bukan cuma yang pertama, tapi jadi awal buat banyak tanggal 21 lainnya yang masih bisa kita rayain bareng.
+
+happy first month. i'm really glad it's you. 🤍
+
+</p>
+
+
+</div>
+
+
+
+<script>
+
+
+let score=0;
+
+
+function spawnLove(){
+
+
+let love=document.createElement("div");
+
+
+love.className="heart";
+
+love.innerHTML="❤️";
+
+
+love.style.left=Math.random()*95+"vw";
+
+love.style.animationDuration=
+(Math.random()*3+3)+"s";
+
+
+
+love.onclick=function(){
+
+
+score++;
+
+document.getElementById("score").innerHTML=score;
+
+
+love.remove();
+
+
+
+if(score>=10){
+
+document.getElementById("openLetter").style.display="inline-block";
+
+}
+
+
+}
+
+
+
+document.body.appendChild(love);
+
+
+
+setTimeout(()=>{
+
+love.remove();
+
+},6000);
+
+
+
+}
+
+
+
+setInterval(spawnLove,700);
+
+
+
+
+
+document.getElementById("openLetter").onclick=function(){
+
+
+document.getElementById("game").style.display="none";
+
+document.getElementById("letter").style.display="block";
+
+
+}
+
+
+
+</script>
+
+
+</body>
+  </html>
