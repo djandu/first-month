@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>made by, love</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<!-- ========================= -->
+<!-- HOME -->
+<!-- ========================= -->
+
+<section id="home" class="page">
+
+<h1>𐀪𐀪</h1>
+
+<p>pencet yang bawah ya, sayang ⤵</p>
+
+<button onclick="startGame()">
+▶︎•၊၊||၊|။|||||။၊|။•
+</button>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- GAME -->
+<!-- ========================= -->
+
+<section id="game" class="page hidden">
+
+<h1>collect my little hearts</h1>
+
+<p>i've got a little surprise waiting for you</p>
+
+<div class="score">
+❤︎️ <span id="count">0</span>/10
+</div>
+
+<div id="loveArea"></div>
+
+<div id="basket">
+🧺
+</div>
+
+<div id="unlock" class="hidden">
+
+<p>mission complete!</p>
+
+<button id="nextBtn" onclick="openLetter()">
+tap here, love
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- LETTER -->
+<!-- ========================= -->
+
+<section id="letter" class="page hidden">
+
+<div class="paper">
+
+<h1>HAPPY FIRST MONTH, BEBEE</h1>
+
+<p id="letterText"></p>
+
+<button id="letterNext" class="hidden" onclick="openLetters()">
+➙
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- LITTLE LETTERS -->
+<!-- ========================= -->
+
+<section id="lettersGame" class="page hidden">
+
+<h1>you've got mail</h1>
+
+<p>each one has something i want you to know</p>
+
+<div class="letters-grid">
+
+<div class="mini-letter" data-id="0">💌</div>
+<div class="mini-letter" data-id="1">💌</div>
+<div class="mini-letter" data-id="2">💌</div>
+
+<div class="mini-letter" data-id="3">💌</div>
+<div class="mini-letter" data-id="4">💌</div>
+<div class="mini-letter" data-id="5">💌</div>
+
+<div class="mini-letter" data-id="6">💌</div>
+<div class="mini-letter" data-id="7">💌</div>
+<div class="mini-letter" data-id="8">💌</div>
+
+</div>
+
+<div id="finishLetters" class="hidden">
+
+<p>
+you've read them all, ready for the next part?
+</p>
+
+<button onclick="openMemoryBox()">
+ ➙
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- POPUP -->
+<!-- ========================= -->
+
+<div id="popup" class="hidden">
+
+<div class="popup-card">
+
+<h2>💌</h2>
+
+<p id="popupText"></p>
+
+<button onclick="closePopup()">
+close
+</button>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- MEMORY BOX -->
+<!-- ========================= -->
+
+<section id="memoryPage" class="page hidden">
+
+<h1>our memories </h1>
+
+<p>
+let's take one more look before we finish :b 
+</p>
+
+<div class="rope">
+
+<div class="slot" data-slot="1"></div>
+<div class="slot" data-slot="2"></div>
+<div class="slot" data-slot="3"></div>
+
+</div>
+
+<div class="rope">
+
+<div class="slot" data-slot="4"></div>
+<div class="slot" data-slot="5"></div>
+<div class="slot" data-slot="6"></div>
+
+</div>
+
+<div class="photo-box">
+
+<div class="photo polaroid">
+    <img src="1.png">
+</div>
+<div class="photo polaroid">
+    <img src="2.png">
+</div>
+<div class="photo polaroid">
+    <img src="3.png">
+</div>
+<div class="photo polaroid">
+    <img src="4.png">
+</div>
+<div class="photo polaroid">
+    <img src="5.png">
+</div>
+<div class="photo polaroid">
+    <img src="6.png">
+</div>
+
+</div>
+
+<div id="finishMemory" class="hidden">
+
+<h2>ready for one last page?</h2>
+
+<button onclick="openFinal()">
+➙
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- FINAL -->
+<!-- ========================= -->
+
+<section id="finalPage" class="page hidden">
+
+<h1>happy first month, love</h1>
+
+<p>
+if you made it this far,
+i hope you know how much you mean to me..
+</p>
+
+</section>
+
+<audio id="bgMusic" loop>
+
+<source src="lagu.mp3" type="audio/mpeg">
+
+</audio>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
